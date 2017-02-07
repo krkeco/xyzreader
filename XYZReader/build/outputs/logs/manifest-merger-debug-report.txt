@@ -52,7 +52,7 @@ MERGED from [com.android.support:support-compat:25.1.1] K:\xyzreader\XYZReader\b
 	android:icon
 		ADDED from K:\xyzreader\XYZReader\src\main\AndroidManifest.xml:13:9-43
 	android:theme
-		ADDED from K:\xyzreader\XYZReader\src\main\AndroidManifest.xml:15:9-43
+		ADDED from K:\xyzreader\XYZReader\src\main\AndroidManifest.xml:15:9-40
 activity#com.example.xyzreader.ui.ArticleListActivity
 ADDED from K:\xyzreader\XYZReader\src\main\AndroidManifest.xml:17:9-24:20
 	android:label

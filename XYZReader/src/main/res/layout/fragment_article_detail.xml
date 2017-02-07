@@ -20,9 +20,11 @@
                 android:background="@color/colorAccent">
                 <!--suppress AndroidLintContentDescription -->
                 <ImageView
+                    android:transitionName="@string/photo_transition"
                     android:id="@+id/photo"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
                      />
 
                 <View
@@ -39,7 +41,7 @@
                 android:layout_gravity="center_horizontal"
                 android:maxWidth="@dimen/detail_card_max_width"
                 android:background="#fff"
-                android:elevation="2dp"
+                android:elevation="4dp"
                 android:layout_marginTop="@dimen/detail_card_top_margin">
 
                 <LinearLayout

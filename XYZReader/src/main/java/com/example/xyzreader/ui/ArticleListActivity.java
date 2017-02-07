@@ -1,5 +1,6 @@
 package com.example.xyzreader.ui;
 
+import android.app.ActivityOptions;
 import android.app.LoaderManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -43,10 +44,7 @@ public class ArticleListActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article_list);
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(mToolbar);
-
-        final View toolbarContainerView = findViewById(R.id.collapsingToolbar);
+     //   final View toolbarContainerView = findViewById(R.id.collapsingToolbar);
 
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
 
@@ -58,14 +56,10 @@ public class ArticleListActivity extends AppCompatActivity implements
         }
 
         Snackbar.make(findViewById(android.R.id.content), "Click a card to read the full story...", Snackbar.LENGTH_LONG)
-           /*     .setAction("Undo", new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                    }
-                })*/
-                .setActionTextColor(Color.RED)
+                .setActionTextColor(Color.BLUE)
                 .show();
+
+
     }
 
     private void refresh() {
@@ -134,7 +128,6 @@ public class ArticleListActivity extends AppCompatActivity implements
             mCursor.moveToPosition(position);
             return mCursor.getLong(ArticleLoader.Query._ID);
         }
-
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = getLayoutInflater().inflate(R.layout.list_item_article, parent, false);
@@ -142,8 +135,14 @@ public class ArticleListActivity extends AppCompatActivity implements
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(Intent.ACTION_VIEW,
-                            ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))));
+
+
+                    Bundle bundle = ActivityOptions
+                            .makeSceneTransitionAnimation(ArticleListActivity.this,(View) findViewById(R.id.thumbnail),
+                                    findViewById(R.id.thumbnail).getTransitionName()).toBundle();
+                    Intent intent = new Intent(Intent.ACTION_VIEW,
+                            ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition())));
+                    startActivity(intent, bundle);
                 }
             });
             return vh;

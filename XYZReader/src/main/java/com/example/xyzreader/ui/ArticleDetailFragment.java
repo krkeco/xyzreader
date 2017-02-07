@@ -9,7 +9,6 @@ import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.graphics.Palette;
@@ -151,10 +150,10 @@ public class ArticleDetailFragment extends Fragment implements
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        coordinator_layout = getActivity().findViewById(R.id.draw_insets_frame_layout);
 
-        coordinator_layout = (CoordinatorLayout) getActivity().findViewById(R.id.draw_insets_frame_layout);
         Snackbar.make(coordinator_layout,
-                "This is a simple Snackbar", Snackbar.LENGTH_LONG)
+                "Swipe to see more articles", Snackbar.LENGTH_LONG)
                 .setAction("CLOSE", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

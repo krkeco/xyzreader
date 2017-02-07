@@ -18,7 +18,7 @@
 <resources>
     <color name="photo_placeholder">#69F0be</color>
 
-    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimary">#B2DFDB</color>
     <color name="colorPrimaryDark">#00695C</color>
-    <color name="colorAccent">#69F0be</color>
+    <color name="colorAccent">#1DE9B6</color>
 </resources>
