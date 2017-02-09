@@ -2,14 +2,14 @@
 
 Transformed a v4 supported Android app into a v7 material design app:
 
--Impliment expanding/contracting action bar
+- Impliment expanding/contracting action bar
 
--Floating Action Button for primary actions
+- Floating Action Button for primary actions
 
--Fluid visual animations between activities
+- Fluid visual animations between activities
 
--Uses Snackbar notifications
+- Uses Snackbar notifications
 
--Original Material Design theme colorscheme
+- Original Material Design theme colorscheme
 
--Maintains Material Design specifications for margins, typeset, and spacing
+- Maintains Material Design specifications for margins, typeset, and spacing
